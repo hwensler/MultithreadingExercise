@@ -12,19 +12,21 @@
 //tell how many threads there are
 #define THREAD_COUNT 20
 
+using namespace std;
+
 int main(){
     //create thread ids
     pthread_t threads[THREAD_COUNT];
 
     //create int to determine if creation was successful
-    int errorCheck;
+    int ErrorCheck;
 
     for(int i = 0; i < THREAD_COUNT; i++){
         cout << "creating thread, " << i << endl;
-        rc = pthread_create(&threads[i], NULL, CountVowels, (void *)i);
+        ErrorCheck = pthread_create(&threads[i], NULL, NULL, (void *)i);
 
-        if (rc){
-            cout << "Error: unable to create thread," << rc << endl;
+        if (ErrorCheck){
+            cout << "Error: unable to create thread," << ErrorCheck << endl;
             exit(-1);
         }
     }
