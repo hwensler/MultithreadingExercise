@@ -24,8 +24,13 @@ int main(){
     //store all vowels
     string vowels [10] = {"A", "a", "E", "e", "I", "i", "O", "o", "U", "u"};
 
+    //this is the function that counts vowels
+  //  int *CountVowels(void *threadarg, string vowels[]){
 
-    for(int i = 0; i < THREAD_COUNT; i++){
+    //}
+
+
+    for(int i = 1; i <= THREAD_COUNT; i++){
         cout << "creating thread, " << i << endl;
         errorCheck = pthread_create(&threads[i], NULL, NULL, (void *)i);
 
