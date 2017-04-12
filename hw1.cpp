@@ -19,14 +19,18 @@ int main(){
     pthread_t threads[THREAD_COUNT];
 
     //create int to determine if creation was successful
-    int ErrorCheck;
+    int errorCheck;
+
+    //store all vowels
+    string vowels [10] = {"A", "a", "E", "e", "I", "i", "O", "o", "U", "u"};
+
 
     for(int i = 0; i < THREAD_COUNT; i++){
         cout << "creating thread, " << i << endl;
-        ErrorCheck = pthread_create(&threads[i], NULL, NULL, (void *)i);
+        errorCheck = pthread_create(&threads[i], NULL, NULL, (void *)i);
 
-        if (ErrorCheck){
-            cout << "Error: unable to create thread," << ErrorCheck << endl;
+        if (errorCheck){
+            cout << "Error: unable to create thread," << errorCheck << endl;
             exit(-1);
         }
     }
