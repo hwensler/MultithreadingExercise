@@ -5,7 +5,9 @@
  * main.cpp
  */
 
+#include <iostream>
+#include <cstdlib>
 #include <pthread.h>
-#include <stdio.h>
+
 
 
