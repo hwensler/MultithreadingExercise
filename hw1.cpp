@@ -138,9 +138,29 @@ int main() {
         cout << "  exiting with status :" << status << endl;
 
     }
+
+    //create an array for total vowel counts
+
+    int totals[5]{0, 0, 0, 0, 0};
+
+    //iterate through the structs, tallying final counts
+    for(int i = 0; i < 20; i++){
+        totals[0] += allCounts[i].aCount;
+        totals[1] += allCounts[i].eCount;
+        totals[2] += allCounts[i].iCount;
+        totals[3] += allCounts[i].oCount;
+        totals[4] += allCounts[i].uCount;
+    }
+
+    //print results
+    cout << "A: " << totals[0] << endl;
+    cout << "E: " << totals[1] << endl;
+    cout << "I: " << totals[2] << endl;
+    cout << "O: " << totals[3] << endl;
+    cout << "U: " << totals[4] << endl;
+
     cout << "Main: program exiting." << endl;
     pthread_exit(NULL);
-    
 }
 
 
