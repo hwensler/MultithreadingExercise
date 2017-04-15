@@ -9,6 +9,7 @@
 #include <cstdlib>
 #include <pthread.h>
 #include <fstream>
+#include <sstream>
 
 //tell how many threads there are
 #define THREAD_COUNT 20
@@ -25,6 +26,13 @@ struct vowelCount{
     int uCount;
 };
 
+//fix it so we can concatinate strings with ints
+string to_string(int i){
+    stringstream ss;
+    ss << i;
+    return ss.str();
+}
+
 //this is the function that counts vowels
 void * countTheVowels(void*arg){
 
@@ -38,7 +46,7 @@ void * countTheVowels(void*arg){
     char character;
 
     //open file
-    file.open(p->fileLocation);
+    file.open((p->fileLocation).c_str());
 
     //while the file is open
     while(!file.eof())
@@ -85,11 +93,16 @@ int main() {
     //create an array of all the file locations
     string fileLocations[THREAD_COUNT];
 
+    //write the file locations
+    for(int i = 0; i < THREAD_COUNT; i++){
+
+        fileLocations[i] = "/home/fac/lil/cpsc5042/hw1/file" + to_string(i+1) + ".txt";
+    }
+
     //load in file locations & initialize counts to 0
     for (int i = 0; i < THREAD_COUNT; i++){
-        //later
-        //allcounts[i].fileLocation = fileLocations[i];
-        allCounts[i].fileLocation = "C:\\Users\\heath\\Documents\\Repositories\\20ThreadedHomework\\txt examples\\file1.txt";
+
+        allCounts[i].fileLocation = fileLocations[i];
         allCounts[i].aCount = 0;
         allCounts[i].eCount = 0;
         allCounts[i].iCount = 0;
@@ -140,8 +153,11 @@ int main() {
     }
 
     //create an array for total vowel counts
-
-    int totals[5]{0, 0, 0, 0, 0};
+    int totals[5];
+    //initialize all initial counts to 0
+    for(int i = 0; i < 5; i++){
+        totals[i] = 0;
+    }
 
     //iterate through the structs, tallying final counts
     for(int i = 0; i < 20; i++){
