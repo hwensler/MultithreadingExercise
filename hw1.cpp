@@ -100,6 +100,12 @@ int main() {
     //create int to determine if creation was successful
     int errorCheck;
 
+    //make an int for the results
+    int results;
+
+    //status of the thread
+    void *status;
+
     //create 20 threads (0 - 19)
     for (int i = 0; i < THREAD_COUNT; i++)
     {
@@ -118,6 +124,23 @@ int main() {
             exit(-1);
         }
     }
+    //join the threads
+    for (int i = 0; i < THREAD_COUNT; i++){
+        //this waits for all the results to be completed
+       results = pthread_join(threads[i], &status);
+
+        if (results){
+            cout << "Error:unable to join," << results << endl;
+            exit(-1);
+        }
+
+        cout << "Main: completed thread id :" << i ;
+        cout << "  exiting with status :" << status << endl;
+
+    }
+    cout << "Main: program exiting." << endl;
+    pthread_exit(NULL);
+    
 }
 
 
