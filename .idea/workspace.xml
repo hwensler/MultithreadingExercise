@@ -12,6 +12,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7684e8a-2e97-4666-a606-978b4b2f8279" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/txt examples/file1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/txt examples/file10.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/txt examples/file11.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/txt examples/file12.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/txt examples/file13.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/txt examples/file14.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/txt examples/file15.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/txt examples/file16.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/txt examples/file17.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/txt examples/file18.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/txt examples/file19.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/txt examples/file2.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/txt examples/file20.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/txt examples/file3.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/txt examples/file4.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/txt examples/file5.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/txt examples/file6.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/txt examples/file7.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/txt examples/file8.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/txt examples/file9.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hw1.cpp" afterPath="$PROJECT_DIR$/hw1.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -32,8 +52,8 @@
       <file leaf-file-name="hw1.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hw1.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4554">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="104">
+              <caret line="175" column="32" lean-forward="true" selection-start-line="175" selection-start-column="32" selection-end-line="175" selection-end-column="32" />
               <folding>
                 <element signature="e#67#86#0" expanded="true" />
               </folding>
@@ -52,6 +72,11 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>out</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -306,12 +331,12 @@
       <option name="presentableId" value="Default" />
       <updated>1492015897499</updated>
       <workItem from="1492015899374" duration="255000" />
-      <workItem from="1492016531920" duration="14518000" />
+      <workItem from="1492016531920" duration="17142000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14773000" />
+    <option name="totallyTimeSpent" value="17397000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="3026" height="1946" extended-state="6" />
@@ -319,11 +344,11 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.05751015" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32918888" sideWeight="0.47699594" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918888" sideWeight="0.4607578" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918888" sideWeight="0.49729365" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32918888" sideWeight="0.52300406" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32978094" sideWeight="0.53788906" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978094" sideWeight="0.4797023" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32978094" sideWeight="0.46211097" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -368,8 +393,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hw1.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4554">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="104">
+          <caret line="175" column="32" lean-forward="true" selection-start-line="175" selection-start-column="32" selection-end-line="175" selection-end-column="32" />
           <folding>
             <element signature="e#67#86#0" expanded="true" />
           </folding>

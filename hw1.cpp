@@ -41,18 +41,19 @@ void * countTheVowels(void*arg){
 
     //open filestream
     fstream file;
+    ifstream streamedfile((p->fileLocation).c_str());
+
+    //save the entire file to a string
+    string entireFile((istreambuf_iterator<char>(streamedfile)), istreambuf_iterator<char>());
 
     //create character which will be read from file
     char character;
 
-    //open file
-    file.open((p->fileLocation).c_str());
-
     //while the file is open
-    while(!file.eof())
+    for (string::iterator it = entireFile.begin(), end = entireFile.end(); it != end; ++it)
     {
         //read the next character
-        file.get(character);
+        character = *it;
 
         //now see if it's a vowel. if it is, increment.
         if(tolower(character) == 'a'){
@@ -95,6 +96,7 @@ int main() {
 
     //write the file locations
     for(int i = 0; i < THREAD_COUNT; i++){
+        //for later C:\Users\heath\Documents\Repositories\20ThreadedHomework\txtexamples\file
 
         fileLocations[i] = "/home/fac/lil/cpsc5042/hw1/file" + to_string(i+1) + ".txt";
     }
@@ -116,8 +118,15 @@ int main() {
     //make an int for the results
     int results;
 
+    //create attributes
+    pthread_attr_t attribute;
+
     //status of the thread
     void *status;
+
+    // Initialize and set thread joinable
+    pthread_attr_init(&attribute);
+    pthread_attr_setdetachstate(&attribute, PTHREAD_CREATE_JOINABLE);
 
     //create 20 threads (0 - 19)
     for (int i = 0; i < THREAD_COUNT; i++)
@@ -130,13 +139,17 @@ int main() {
 
         //create the threads
         cout << "creating thread, " << i << endl;
-        errorCheck = pthread_create(&threads[i], NULL, &countTheVowels, (void *) tempCount);
+        errorCheck = pthread_create(&threads[i], &attribute, &countTheVowels, (void *) tempCount);
 
         if (errorCheck) {
             cout << "Error: unable to create thread," << errorCheck << endl;
             exit(-1);
         }
     }
+
+    // free attribute and wait for the other threads
+    pthread_attr_destroy(&attribute);
+
     //join the threads
     for (int i = 0; i < THREAD_COUNT; i++){
         //this waits for all the results to be completed
@@ -176,6 +189,8 @@ int main() {
     cout << "U: " << totals[4] << endl;
 
     cout << "Main: program exiting." << endl;
+
+    cout.flush();
     pthread_exit(NULL);
 }
 
