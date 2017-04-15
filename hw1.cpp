@@ -76,9 +76,6 @@ void * countTheVowels(void*arg){
     //close the file
     file.close();
 
-    //free your variables
-    delete p;
-
     //return
     return NULL;
 }
@@ -138,7 +135,7 @@ int main() {
         tempCount = &allCounts[i];
 
         //create the threads
-        cout << "creating thread, " << i << endl;
+        //cout << "creating thread, " << i << endl; - for debugging
         errorCheck = pthread_create(&threads[i], &attribute, &countTheVowels, (void *) tempCount);
 
         if (errorCheck) {
@@ -160,8 +157,9 @@ int main() {
             exit(-1);
         }
 
-        cout << "Main: completed thread id :" << i ;
-        cout << "  exiting with status :" << status << endl;
+        //for debugging
+        //cout << "Main: completed thread id :" << i ;
+        //cout << "  exiting with status :" << status << endl;
 
     }
 
